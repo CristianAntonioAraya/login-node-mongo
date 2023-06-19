@@ -1,7 +1,7 @@
 import express from 'express';
 import 'dotenv/config';
-import '../src/database.js';
-import userRouter from '../src/router/userRouter.js';
+import './database.js';
+import userRouter from './router/userRouter.js';
 import { engine } from 'express-handlebars';
 import bodyParser from 'body-parser';
 
@@ -13,7 +13,7 @@ class Server {
         this.app.use('/', userRouter);
         this.app.engine('handlebars', engine());
         this.app.set('view engine', 'handlebars');
-        this.app.set('views', './views');
+        this.app.set('views', '/api/views');
     }
     middleware() {
         this.app.use(express.static('public'));
