@@ -20,7 +20,7 @@ const loginUser = async (req, res, next) => {
         const { email, password } = req.body;
         const user = await services.login({ email, password });
         if (user) {
-            res.redirect('/all');
+            res.render('login', { style: 'auth.css', user: user.userName });
         }
     } catch (error) {
         res.render('login', { style: 'auth.css', error: error.message });

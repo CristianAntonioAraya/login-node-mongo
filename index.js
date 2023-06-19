@@ -13,7 +13,7 @@ class Server {
         this.app.use('/', userRouter);
         this.app.engine('handlebars', engine());
         this.app.set('view engine', 'handlebars');
-        this.app.set('views', '/api/views');
+        this.app.set('views', 'views');
     }
     middleware() {
         this.app.use(express.static('public'));

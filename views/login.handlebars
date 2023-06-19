@@ -4,6 +4,9 @@
         {{#if error}}
             <p class='auth__error'>{{error}}</p>
         {{/if}}
+        {{#if user}}
+            <p class='auth__user'>Logged correctly, welcome {{user}}!</p>
+        {{/if}}
 
         <div class='auth__input-container'>
             <input type='text' id='email' name='email' required />
