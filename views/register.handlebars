@@ -1,0 +1,27 @@
+<div class='auth__container'>
+    <form action='/register' method='POST'>
+        <h1 class='auth__title'>Sign Up</h1>
+        {{#if error}}
+            <p class='auth__error'>{{error}}</p>
+        {{/if}}
+
+        <div class='auth__input-container'>
+            <input type='text' id='userName' name='userName' required />
+            <label for='userName'>Name</label>
+        </div>
+        <div class='auth__input-container'>
+            <input type='text' id='email' name='email' required />
+            <label for='email'>Email</label>
+        </div>
+
+        <div class='auth__input-container'>
+            <input type='password' id='password' name='password' required />
+            <label for='password'>Password</label>
+        </div>
+
+        <div class='auth__input-container'>
+            <button class='auth__btn'>Register</button>
+        </div>
+    </form>
+    <a href='/login'>Already have an account? go to login</a>
+</div>

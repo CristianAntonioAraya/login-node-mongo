@@ -1,0 +1,75 @@
+.auth__container {
+    width: 100vw;
+    height: calc(100% - 5rem);
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth__container form {
+    width: 25%;
+}
+
+.auth__title {
+    text-align: center;
+    font-size: 60px;
+    color: var(--BLUE);
+    margin-bottom: 2rem;
+}
+.auth__error {
+    color: brown;
+    text-align: center;
+    font-size: var(--Size5);
+}
+.auth__input-container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin: var(--Size3) 0;
+}
+.auth__input-container input {
+    background-color: var(--WHITE);
+    width: 100%;
+    border: 1px solid var(--GREY);
+    border-radius: var(--Size2);
+    padding: var(--Size4);
+    outline: none;
+    font-size: var(--Size5);
+}
+
+.auth__input-container label {
+    position: absolute;
+    top: var(--Size4);
+    left: var(--Size3);
+    pointer-events: none;
+    font-size: var(--Size5);
+    color: var(--GREY);
+    transition: 0.3s;
+}
+.auth__container input:valid ~ label,
+input:focus ~ label {
+    color: var(--BLUE);
+    transform: translateY(-32px) translateX(var(--Size1));
+    background-color: var(--WHITE);
+}
+
+.auth__container input:valid,
+input:focus {
+    border: 1px solid var(--BLUE) !important;
+}
+.auth__btn {
+    width: 100%;
+    background-color: var(--BLUE);
+    font-size: var(--Size5);
+    padding: var(--Size3);
+    border: 1px solid var(--BLUE);
+    color: var(--WHITE);
+    border-radius: var(--Size2);
+    transition: 0.2s;
+}
+.auth__btn:hover {
+    background-color: var(--WHITE);
+    border: 1px solid var(--BLUE);
+    color: var(--BLUE);
+}
