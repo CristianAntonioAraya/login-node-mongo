@@ -1,0 +1,24 @@
+.container {
+    width: 100vw;
+    height: calc(100vh - 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container p {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--BLUE);
+}
+
+.container a {
+    background-color: var(--BLUE);
+    font-size: var(--Size5);
+    padding: var(--Size3);
+    border: 1px solid var(--BLUE);
+    color: var(--WHITE);
+    border-radius: var(--Size2);
+    transition: 0.2s;
+    cursor: pointer;
+}
