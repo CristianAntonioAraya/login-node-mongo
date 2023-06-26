@@ -14,6 +14,16 @@ The server was built using `node`, `express`, `mongoose` and `mongodb`.
 
 <hr>
 
+## Pages 🗒️
+
+- Home Page ➡️ Details about the project
+- Login Page ➡️ Login Form
+- Register Page ➡️ Register Form
+- User Page ➡️ current logged in user
+- All Page  ➡️ Show all users in json format
+- 404 Page ➡️ Resource not found
+
+<hr>
 ## Quick Start 🚀
 
 If you want to modify this project, you can create a branch and clone it
