@@ -24,6 +24,7 @@ The server was built using `node`, `express`, `mongoose` and `mongodb`.
 - 404 Page ➡️ Resource not found
 
 <hr>
+
 ## Quick Start 🚀
 
 If you want to modify this project, you can create a branch and clone it
@@ -59,7 +60,7 @@ Runs the app in the development mode.\
 
 <hr/>
 
-## **Third Party Package in this project**
+## **Third Party Package in this project** ☑️
 
 -   `bcryptjs`
 -   `cors`
