@@ -1,4 +1,6 @@
 import UserServices from '../services/userServices.js';
+import { generateJwt } from '../middlewares/jwt.js';
+import jwt from 'jsonwebtoken';
 
 const services = new UserServices();
 
@@ -15,29 +17,52 @@ const getAllUsers = async (req, res, next) => {
     }
 };
 
-const loginUser = async (req, res, next) => {
+const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await services.login({ email, password });
+
         if (user) {
-            res.render('login', { style: 'auth.css', user: user.userName });
+            const token = await generateJwt(user.id, user.userName);
+            res.json({ ok: true, user, token });
         }
     } catch (error) {
-        res.render('login', { style: 'auth.css', error: error.message });
+        res.json({ ok: false, error: error.message });
     }
 };
 
-const createNewUser = async (req, res, next) => {
+const createNewUser = async (req, res) => {
     try {
         const { userName, email, password } = req.body;
+        console.log(req.body);
         const user = await services.create({ userName, email, password });
         if (user) {
-            res.redirect('/all');
+            const token = await generateJwt(user.id, user.userName);
+            return res.json({ ok: true, user, token });
         }
-        res.redirect('/register');
+        res.json({ ok: false, error: 'Error creating user' });
     } catch (error) {
-        res.render('register', { style: 'auth.css', error: error.message });
+        res.json({ ok: false, error: error.message });
     }
 };
 
-export { createNewUser, getAllUsers, loginUser };
+const validateJwt = (req, res) => {
+    const token = req.header('x-token');
+    if (!token) {
+        return res.json({
+            ok: false,
+            error: 'The token is missing',
+        });
+    }
+
+    try {
+        const { userName, id } = jwt.verify(token, process.env.SECRET_JWT_SEED);
+        return res.json({ ok: true, userName, id });
+    } catch (error) {
+        return res.json({
+            ok: false,
+            error: 'Invalid Token',
+        });
+    }
+};
+export { createNewUser, getAllUsers, loginUser, validateJwt };

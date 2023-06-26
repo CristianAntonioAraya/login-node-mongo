@@ -1,0 +1,23 @@
+.user__container {
+    width: 100vw;
+    padding: 5rem 10rem;
+}
+.user__title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--BLUE);
+    font-weight: bold;
+}
+.user_subtitle {
+    color: var(--BLUE);
+    font-size: 30px;
+    text-align: center;
+}
+.user_subtitle2 {
+    margin-top: 1rem;
+    color: var(--BLUE);
+    font-size: 25px;
+    text-align: center;
+}

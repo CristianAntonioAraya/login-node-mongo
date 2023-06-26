@@ -9,12 +9,19 @@
         <nav class='nav'>
             <a href='/'>Login-Node</a>
             <ul>
-                <a href='/login'>Login</a>
-                <a href='/register'>Register</a>
+                <a id='auth' class='display-none' href='/login'>Login</a>
+                <a id='auth1' class='display-none' href='/register'>Register</a>
+                <button
+                    id='auth2'
+                    class='display-none'
+                    href='/register'
+                >Logout</button>
                 <a href='/all'>Users</a>
             </ul>
         </nav>
         {{{body}}}
+        <footer>Created by Cristian Araya 🧑‍💻</footer>
 
+        <script src='js/nav.js'></script>
     </body>
 </html>

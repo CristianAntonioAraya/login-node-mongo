@@ -1,10 +1,12 @@
 # **Login Server using Node MongoDB**
 
-_This application was made as a test of development skills._
+_This application was made as a test of development skills._ 🧑‍💻
+
+You can see the app in production [Go To App!](https://login-node-mongo-production-cb8e.up.railway.app/)
 
 The purpose of this application is to be able to log in and register a user in a database, passing a security and verification layer and encrypting sensitive information.
 
-## Description
+## Description 📓
 
 The server was built using `node`, `express`, `mongoose` and `mongodb`.
 
@@ -12,7 +14,7 @@ The server was built using `node`, `express`, `mongoose` and `mongodb`.
 
 <hr>
 
-## Quick Start
+## Quick Start 🚀
 
 If you want to modify this project, you can create a branch and clone it
 
@@ -31,7 +33,7 @@ If you want to modify this project, you can create a branch and clone it
 
 <hr/>
 
-## Available Scripts
+## Available Scripts 💻
 
 In the project directory, you can run:
 

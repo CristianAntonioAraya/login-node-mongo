@@ -1,9 +1,8 @@
 <div class='auth__container'>
-    <form action='/register' method='POST'>
+    <form id='registerForm'>
         <h1 class='auth__title'>Sign Up</h1>
-        {{#if error}}
-            <p class='auth__error'>{{error}}</p>
-        {{/if}}
+
+        <div class='auth__error' id='mensajeError'></div>
 
         <div class='auth__input-container'>
             <input type='text' id='userName' name='userName' required />
@@ -25,3 +24,4 @@
     </form>
     <a href='/login'>Already have an account? go to login</a>
 </div>
+<script src='js/register.js'></script>

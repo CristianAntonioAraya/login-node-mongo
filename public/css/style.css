@@ -47,3 +47,28 @@ body {
     margin-left: 10px;
     cursor: pointer;
 }
+.nav ul button {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.display-none {
+    display: none;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--BLUE);
+    color: var(--WHITE);
+    padding: 0.6rem;
+}
